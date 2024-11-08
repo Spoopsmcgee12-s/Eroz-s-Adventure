@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://btowaguv66htu"]
+[gd_scene load_steps=13 format=3 uid="uid://btowaguv66htu"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_f6ejh"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/player.gd" id="2_2you8"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/generation.gd" id="3_snbj7"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/enemies.gd" id="5_mdaue"]
+[ext_resource type="PackedScene" uid="uid://dkkyc72ckxtrp" path="res://Eroz-s-Adventure/Scenes/exit_key.tscn" id="6_0b63h"]
 [ext_resource type="PackedScene" uid="uid://lym2cqa5bby1" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="6_hgrfv"]
 [ext_resource type="PackedScene" uid="uid://drgkvsyu3aw0o" path="res://Eroz-s-Adventure/Scenes/Room.tscn" id="7_gceyf"]
+[ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/ui.gd" id="8_a8ruu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2ett"]
 size = Vector2(13.0769, 13.8462)
@@ -78,10 +80,89 @@ script = ExtResource("5_mdaue")
 [node name="Generation" type="Node" parent="."]
 script = ExtResource("3_snbj7")
 max_enemies_per_room = 1.0
-max_coins_per_room = 1.0
-max_hearts_per_room = 1.0
+max_coins_per_room = 3.0
+max_hearts_per_room = 2.0
 
 [node name="Base" parent="." instance=ExtResource("7_gceyf")]
+key_node = ExtResource("6_0b63h")
 
 [node name="Enemy" parent="." instance=ExtResource("6_hgrfv")]
 position = Vector2(115, 85)
+
+[node name="Ui" type="CanvasLayer" parent="."]
+script = ExtResource("8_a8ruu")
+
+[node name="Health Bar" type="Panel" parent="Ui"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_right = 159.0
+offset_bottom = -5.0
+grow_vertical = 0
+scale = Vector2(1.31817, 1)
+
+[node name="Player Health" type="Sprite2D" parent="Ui/Health Bar"]
+position = Vector2(14.4139, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f6ejh")
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(680, 170, 50, 16)
+
+[node name="Player Health2" type="Sprite2D" parent="Ui/Health Bar"]
+position = Vector2(43.2418, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f6ejh")
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(680, 170, 50, 16)
+
+[node name="Player Health3" type="Sprite2D" parent="Ui/Health Bar"]
+position = Vector2(72.0696, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f6ejh")
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(680, 170, 50, 16)
+
+[node name="Player Health4" type="Sprite2D" parent="Ui/Health Bar"]
+position = Vector2(103.173, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f6ejh")
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(680, 170, 50, 16)
+
+[node name="Stat Block" type="Panel" parent="Ui"]
+offset_left = 1.0
+offset_top = 522.0
+offset_right = 128.0
+offset_bottom = 562.0
+
+[node name="Coin Stat" type="Sprite2D" parent="Ui/Stat Block"]
+position = Vector2(16, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f6ejh")
+region_enabled = true
+region_rect = Rect2(697, 51, 16, 16)
+
+[node name="Coin Label" type="Label" parent="Ui/Stat Block"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 7.0
+offset_right = 74.0
+offset_bottom = 30.0
+text = ": 0"
+
+[node name="Key Indicator" type="Sprite2D" parent="Ui/Stat Block"]
+modulate = Color(0.279967, 0.279967, 0.279967, 1)
+position = Vector2(100, 18)
+scale = Vector2(2.625, 2.125)
+texture = ExtResource("1_f6ejh")
+region_enabled = true
+region_rect = Rect2(544, 187, 16, 16)

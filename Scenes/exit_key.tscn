@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkkyc72ckxtrp"]
+
+[ext_resource type="Texture2D" uid="uid://o0sa5wvwsw2d" path="res://Eroz-s-Adventure/Assets/Assets/Spritesheet.png" id="1_d57ua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p0gg"]
+size = Vector2(14, 8)
+
+[node name="Exit Key" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d57ua")
+region_enabled = true
+region_rect = Rect2(545, 192, 14, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2p0gg")
