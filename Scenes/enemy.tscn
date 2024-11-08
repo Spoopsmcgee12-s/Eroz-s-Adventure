@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://lym2cqa5bby1"]
+
+[ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/enemy.gd" id="1_w7mhj"]
+[ext_resource type="Texture2D" uid="uid://o0sa5wvwsw2d" path="res://Eroz-s-Adventure/Assets/Assets/Spritesheet.png" id="2_bik5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suaue"]
+size = Vector2(14.6154, 12.3077)
+
+[sub_resource type="Animation" id="Animation_3ltsv"]
+resource_name = "Hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.180392, 1, 1), Color(1, 1, 1, 1), Color(1, 0.180392, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qlf0q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.180392, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30lwq"]
+_data = {
+"Hit": SubResource("Animation_3ltsv"),
+"RESET": SubResource("Animation_qlf0q")
+}
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy", "Wall"]]
+modulate = Color(1, 0.180392, 1, 1)
+texture_filter = 1
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1_w7mhj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bik5r")
+region_enabled = true
+region_rect = Rect2(443, 87, 14, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.384616, 9.16995e-08)
+shape = SubResource("RectangleShape2D_suaue")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_30lwq")
+}
