@@ -2,7 +2,9 @@ extends Node
 
 
 #player spawns in the base room but no other doors spawn to let player out of base room, fix this later.
-
+#nothing spawns inside rooms which is a complete bug and somehow needs to be fixed.
+#player base room still doesnt open any walls when a door is also base is no connected to it, also doesnt move with map generation so base and map wont conect on 99% of map generation outcomes.
+#have tried to fix all of these issue and nothing has worked this far~Lexi <3
 @onready var room_scene : PackedScene = load("res://Eroz-s-Adventure/Scenes/Room.tscn")
 var map_width : int = 7
 var map_height : int = 7
