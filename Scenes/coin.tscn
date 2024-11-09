@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct0jc58shxgec"]
+[gd_scene load_steps=4 format=3 uid="uid://u6qyuhpdmbn1"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_71opd"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/coin.gd" id="1_yub1x"]

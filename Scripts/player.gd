@@ -3,7 +3,7 @@ extends CharacterBody2D
 var damage : int = 1
 var health : int = 8
 var attack_chance : float = 0.5
-
+var has_key : bool = false
 signal player_moved
 
 func player_input() -> void:
@@ -39,8 +39,9 @@ func try_attack(direction : Vector2) -> void:
 	if not result or not result.collider.is_in_group("Wall"):
 		global_position += direction * 5  
 		
-	if not result or not result.collider.is_in_group("Enemy"):
+	if not result or result.collider.is_in_group("Enemy"):
 		result.collider.take_damage(1)
+		
 
 func move(direction: Vector2) -> void:
 	var query = PhysicsRayQueryParameters2D.new()

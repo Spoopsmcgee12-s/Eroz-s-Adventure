@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/generation.gd" id="3_snbj7"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/enemies.gd" id="5_mdaue"]
 [ext_resource type="PackedScene" uid="uid://dkkyc72ckxtrp" path="res://Eroz-s-Adventure/Scenes/exit_key.tscn" id="6_0b63h"]
-[ext_resource type="PackedScene" uid="uid://lym2cqa5bby1" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="6_hgrfv"]
-[ext_resource type="PackedScene" uid="uid://drgkvsyu3aw0o" path="res://Eroz-s-Adventure/Scenes/Room.tscn" id="7_gceyf"]
+[ext_resource type="PackedScene" uid="uid://d1286eqbkyi1j" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="6_hgrfv"]
+[ext_resource type="PackedScene" uid="uid://bcdm14u5w4qsv" path="res://Eroz-s-Adventure/Scenes/Room.tscn" id="7_gceyf"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/ui.gd" id="8_a8ruu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2ett"]
@@ -160,7 +160,7 @@ offset_bottom = 30.0
 text = ": 0"
 
 [node name="Key Indicator" type="Sprite2D" parent="Ui/Stat Block"]
-modulate = Color(0.279967, 0.279967, 0.279967, 1)
+modulate = Color(0.309385, 0.309385, 0.309385, 1)
 position = Vector2(100, 18)
 scale = Vector2(2.625, 2.125)
 texture = ExtResource("1_f6ejh")

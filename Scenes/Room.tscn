@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://drgkvsyu3aw0o"]
+[gd_scene load_steps=8 format=4 uid="uid://bcdm14u5w4qsv"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_sqj85"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/room.gd" id="1_stsra"]
-[ext_resource type="PackedScene" uid="uid://lym2cqa5bby1" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="2_px7i0"]
-[ext_resource type="PackedScene" uid="uid://ct0jc58shxgec" path="res://Eroz-s-Adventure/Scenes/coin.tscn" id="3_4xv1m"]
-[ext_resource type="PackedScene" uid="uid://dhr5rro1t76ra" path="res://Eroz-s-Adventure/Scenes/heart.tscn" id="3_udupb"]
+[ext_resource type="PackedScene" uid="uid://d1286eqbkyi1j" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="2_px7i0"]
+[ext_resource type="PackedScene" uid="uid://u6qyuhpdmbn1" path="res://Eroz-s-Adventure/Scenes/coin.tscn" id="3_4xv1m"]
+[ext_resource type="PackedScene" uid="uid://v1ymnfb7q4rp" path="res://Eroz-s-Adventure/Scenes/heart.tscn" id="3_udupb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vce6l"]
 texture = ExtResource("1_sqj85")

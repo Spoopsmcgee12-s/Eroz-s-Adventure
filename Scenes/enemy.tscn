@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://lym2cqa5bby1"]
+[gd_scene load_steps=7 format=3 uid="uid://d1286eqbkyi1j"]
 
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/enemy.gd" id="1_w7mhj"]
 [ext_resource type="Texture2D" uid="uid://o0sa5wvwsw2d" path="res://Eroz-s-Adventure/Assets/Assets/Spritesheet.png" id="2_bik5r"]
