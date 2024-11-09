@@ -38,7 +38,7 @@ func try_attack(direction : Vector2) -> void:
 	var result = get_world_2d().direct_space_state.intersect_ray(query)
 	if not result or not result.collider.is_in_group("Wall"):
 		global_position += direction * 5  
-		
+		#this doesnt work for some reson this should tell the player to take damage however for some reason it quits working once i press the action keys for the player attack
 	if not result or result.collider.is_in_group("Enemy"):
 		result.collider.take_damage(1)
 		
