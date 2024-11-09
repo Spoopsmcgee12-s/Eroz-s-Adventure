@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://btowaguv66htu"]
+[gd_scene load_steps=15 format=3 uid="uid://btowaguv66htu"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_f6ejh"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/player.gd" id="2_2you8"]
@@ -48,6 +48,12 @@ _data = {
 "Player Hit": SubResource("Animation_uma77"),
 "RESET": SubResource("Animation_ob4vh")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onrs0"]
+bg_color = Color(0, 0, 0, 0.235294)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bufle"]
+bg_color = Color(0.900304, 0.810754, 0.953039, 1)
 
 [node name="World" type="Node2D"]
 
@@ -166,3 +172,40 @@ scale = Vector2(2.625, 2.125)
 texture = ExtResource("1_f6ejh")
 region_enabled = true
 region_rect = Rect2(544, 187, 16, 16)
+
+[node name="Mini Map" type="Panel" parent="Ui"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_onrs0")
+
+[node name="GridContainer" type="GridContainer" parent="Ui/Mini Map"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 63.0
+offset_right = 179.0
+offset_bottom = 188.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+
+[node name="Mini Map Grid" type="Panel" parent="Ui/Mini Map/GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bufle")
+
+[node name="Label" type="Label" parent="Ui/Mini Map"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 37.0
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj4qd64trvmr0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bufle"]
+bg_color = Color(0.900304, 0.810754, 0.953039, 1)
+
+[node name="Mini Map Grid" type="Panel"]
+custom_minimum_size = Vector2(20, 20)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bufle")
