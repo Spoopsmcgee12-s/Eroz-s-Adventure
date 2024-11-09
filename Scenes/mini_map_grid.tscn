@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj4qd64trvmr0"]
+[gd_scene load_steps=3 format=3 uid="uid://dj4qd64trvmr0"]
+
+[ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/mini_map_grid.gd" id="1_h68jx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bufle"]
 bg_color = Color(0.900304, 0.810754, 0.953039, 1)
@@ -8,3 +10,4 @@ custom_minimum_size = Vector2(20, 20)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_bufle")
+script = ExtResource("1_h68jx")
