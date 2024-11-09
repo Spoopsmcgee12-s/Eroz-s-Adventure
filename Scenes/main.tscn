@@ -83,9 +83,6 @@ script = ExtResource("5_mdaue")
 
 [node name="Generation" type="Node" parent="."]
 script = ExtResource("3_snbj7")
-max_enemies_per_room = 1.0
-max_coins_per_room = 3.0
-max_hearts_per_room = 2.0
 
 [node name="Base" parent="." instance=ExtResource("7_gceyf")]
 key_node = ExtResource("6_0b63h")

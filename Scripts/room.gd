@@ -59,3 +59,21 @@ func spawn_nodes(node_scene : PackedScene, min_ins : int = 0,max_ins : int = 0) 
 		add_child(node_obj)
 		if node_scene == enemy_node:
 			get_tree().get_first_node_in_group("Enemy Manager").check_enemies()
+			
+
+
+func spawn_key() -> void:
+	if key_node:
+		var key_instance = key_node.instantiate()
+		add_child(key_instance)
+		key_instance.position = Vector2(50, 50)
+	else:
+		print("Warning: key_scene is not assigned in room.gd.")
+
+func spawn_exit_door() -> void:
+	if  exit_door_node :
+		var exit_door_instance = exit_door_node.instantiate()
+		add_child(exit_door_instance)
+		exit_door_instance.position = Vector2(150, 150)
+	else:
+		print("Warning: exit_door_scene is not assigned in room.gd.")
