@@ -62,7 +62,18 @@ func _process(delta) -> void:
 			$"Health Bar/Player Health2".frame = 0
 			$"Health Bar/Player Health3".frame = 0
 			$"Health Bar/Player Health4".frame = 0
+	$"Mini Map/Level Label".text = "Level: " + str(Global.level)
+	update_mini_map()
 
+
+func update_mini_map() -> void:
+	var pos : Vector2i = (player.global_position / 50)
+	var panels = $"Mini Map/GridContainer".get_children()
+	for panel in panels:
+		if panel.is_room:
+			panel.modulate = "ffffff"
+		if panel.pos == pos:
+			panel.modulate = "007a27"
 
 func generate_mini_map() -> void:
 	$"Mini Map/GridContainer".columns = Generation.map_width
