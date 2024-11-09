@@ -86,6 +86,6 @@ func generate_mini_map() -> void:
 			#Error:Invalid assignment of property or key 'is_in_room' 
 			#with value of type 'bool' on a base object of type 
 			#'Panel (mini_map_grid.gd)'.
-				panel.is_in_room = true 
+				panel.is_room = true 
 			panel.pos = Vector2i(j, i)
 			$"Mini Map/GridContainer".add_child(panel)
