@@ -96,4 +96,15 @@ func instantiate_rooms() -> void:
 				
 			$"..".call_deferred("add_child", room)
 			room_nodes.append(room)
+	get_tree().create_timer(1)
+	calculate_key_and_exit()
 	
+func calculate_key_and_exit() -> void:
+	var max_dis : float = 0
+	var room_a : Node2D = null
+	var room_b : Node2D = null
+	
+	for a : Node2D in room_nodes:
+		for b : Node2D in room_nodes:
+			var dis : float = a.position.distance_to(b.position)
+			

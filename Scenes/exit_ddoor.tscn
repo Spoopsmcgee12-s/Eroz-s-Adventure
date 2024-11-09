@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqhw6ihjq4gf2"]
+
+[ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/exit_ddoor.gd" id="1_bktr3"]
+[ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="2_v2q6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my5a8"]
+size = Vector2(14, 14)
+
+[node name="Exit Ddoor" type="Area2D"]
+script = ExtResource("1_bktr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v2q6y")
+region_enabled = true
+region_rect = Rect2(0, 153, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_my5a8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
