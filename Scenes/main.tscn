@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btowaguv66htu"]
+[gd_scene load_steps=15 format=3 uid="uid://btowaguv66htu"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_f6ejh"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/player.gd" id="2_2you8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/enemies.gd" id="5_mdaue"]
 [ext_resource type="PackedScene" uid="uid://dkkyc72ckxtrp" path="res://Eroz-s-Adventure/Scenes/exit_key.tscn" id="6_0b63h"]
 [ext_resource type="PackedScene" uid="uid://d1286eqbkyi1j" path="res://Eroz-s-Adventure/Scenes/enemy.tscn" id="6_hgrfv"]
+[ext_resource type="PackedScene" uid="uid://bqhw6ihjq4gf2" path="res://Eroz-s-Adventure/Scenes/exit_ddoor.tscn" id="7_afd5o"]
 [ext_resource type="PackedScene" uid="uid://bcdm14u5w4qsv" path="res://Eroz-s-Adventure/Scenes/Room.tscn" id="7_gceyf"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/ui.gd" id="8_a8ruu"]
 
@@ -88,6 +89,7 @@ max_hearts_per_room = 2.0
 
 [node name="Base" parent="." instance=ExtResource("7_gceyf")]
 key_node = ExtResource("6_0b63h")
+exit_door_node = ExtResource("7_afd5o")
 
 [node name="Enemy" parent="." instance=ExtResource("6_hgrfv")]
 position = Vector2(115, 85)
