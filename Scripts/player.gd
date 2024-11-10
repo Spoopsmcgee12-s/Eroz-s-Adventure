@@ -6,7 +6,12 @@ var health : int = max_health
 @export var attack_chance : float = 0.5
 var has_key : bool = false
 signal player_moved
+signal health_changed
+signal coin_count_updated
+signal key_acquired
 
+
+ 
 func _ready() -> void:
 	# Ensure proper health setup and connect signals here
 	update_health_ui()
