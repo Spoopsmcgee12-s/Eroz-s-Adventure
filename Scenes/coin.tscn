@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://u6qyuhpdmbn1"]
+[gd_scene load_steps=5 format=3 uid="uid://u6qyuhpdmbn1"]
 
 [ext_resource type="Texture2D" uid="uid://dic2lpnutuaai" path="res://Eroz-s-Adventure/Assets/Assets/SFX/Spritesheet.png" id="1_71opd"]
 [ext_resource type="Script" path="res://Eroz-s-Adventure/Scripts/coin.gd" id="1_yub1x"]
+[ext_resource type="AudioStream" uid="uid://bevmbm7sguen2" path="res://Eroz-s-Adventure/Assets/Assets/SFX/walk.wav" id="3_f0w4j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2eyps"]
 radius = 6.08276
@@ -17,5 +18,8 @@ region_rect = Rect2(699, 53, 12, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2eyps")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f0w4j")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

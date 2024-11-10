@@ -36,4 +36,5 @@ func take_damage(damage_taken : int) -> void:
 		$AnimationPlayer.play("Hit") 
 	if randf() > attack_chance:
 		player.take_damage(damage)
-	
+	$SFX.stream = load("res://Eroz-s-Adventure/Assets/Assets/SFX/Hit.wav")
+	$SFX.play()
