@@ -51,7 +51,13 @@ func move(direction: Vector2) -> void:
 	var result = get_world_2d().direct_space_state.intersect_ray(query)
 	if not result or not result.collider.is_in_group("Wall"):
 		global_position += direction * 5
+		
+		$SFX.stream = load("res://Eroz-s-Adventure/Assets/Assets/SFX/walk.wav")
+		$SFX.play()
 		emit_signal("player_moved")
+
+	
+	
 
 
 
@@ -68,5 +74,7 @@ func take_damage(damage_taken: int) -> void:
 	$AnimationPlayer.play("Player Hit")
 	if randf() > attack_chance:
 		player.take_damage(damage)
+		$SFX.stream = load("res://Eroz-s-Adventure/Assets/Assets/SFX/Hit.wav")
+		$SFX.play()
 		get_tree().reload_current_scene()
 	
